@@ -1,0 +1,11 @@
+{
+  "name": "javascript-practice-projects",
+  "version": "1.0.0",
+  "description": "A variety of projects to solidify the knowledge acquired in html, css and javascript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolas Rios",
+  "license": "ISC"
+}
