@@ -1,0 +1,43 @@
+/* 
+========= Fonts =========
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* 
+========= Variables =========
+*/
+:root {
+  /* colors */
+  --cl-primary:
+  --cl-secondary:
+  --cl-primary-gray:
+}
+
+/*
+========= Reset =========
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+========= Global =========
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Montserrat, sans sans-serif;
+}
+
+
+
+
+
+
