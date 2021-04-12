@@ -1,0 +1,126 @@
+/* 
+========= Fonts =========
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* 
+========= Variables =========
+*/
+:root {
+  /* colors */
+  --cl-primary: #4e4e4e;
+  --cl-secondary: #f0f0f0;
+  --cl-terciary: #20e49e;
+}
+
+/*
+========= Reset =========
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*
+========= Global =========
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  justify-content: center;
+  background-color: var(--cl-secondary);
+  color: var(--cl-secondary);
+  font-family: Montserrat, sans sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+a {
+  color: var(--cl-secondary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--cl-terciary);
+  color: var(--cl-primary);
+  transform: translateY(130px);
+  border-color: var(--cl-secondary);
+}
+
+/*
+========= Classes =========
+*/
+.shadow {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.34);
+}
+
+/*
+========= Layout =========
+*/
+
+/* Navbar */
+#navbar {
+  background-color: var(--cl-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  min-height: 3.5em;
+  font-size: 1.8rem;
+}
+
+/* Main */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 80%;
+  max-width: 600px;
+}
+
+.btn,
+.color-display {
+  background-color: var(--cl-primary);
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+  border: 2px solid gray;
+  font-weight: 600;
+}
+
+.button-container {
+  margin-bottom: 1.5em;
+}
+
+.color-display {
+  display: flex;
+  flex-direction: column;
+  min-width: 80%;
+  margin-bottom: 1.5em;
+}
+
+.color {
+  color: var(--cl-terciary);
+}
