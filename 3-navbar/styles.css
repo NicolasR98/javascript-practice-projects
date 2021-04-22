@@ -1,0 +1,170 @@
+/*
+===================
+Fonts
+===================
+*/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+
+/*
+===================
+Variables
+===================
+*/
+
+:root {
+  /* Colors */
+  --cl-text: #fcfcfc;
+  --cl-gray-1: #3a3a3a;
+  --cl-gray-2: #4d4d4d;
+}
+
+/*
+===================
+Reset
+===================
+*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+===================
+Global
+===================
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Quicksand, sans-serif;
+  font-size: 16px;
+  color: var(--cl-text);
+  background-color: grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*
+===================
+Layout
+===================
+*/
+
+/*======= Desktop Size =======*/
+#navbar {
+  width: 100%;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cl-gray-1);
+  border-bottom: 1px solid #333333;
+}
+
+.navbar-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-links-container {
+  display: flex;
+  /* border: 1px solid; */
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-links {
+  margin-right: 2.5em;
+}
+
+.navbar-links,
+.navbar-social {
+  display: flex;
+  font-weight: 600;
+}
+.nav-link,
+.social-logo {
+  padding: 1em;
+}
+
+.navbar-header img {
+  width: 12em;
+}
+
+.social-logo {
+  width: 4em;
+}
+
+#navbar-hamburguer {
+  display: none;
+}
+
+/*======= Mobile Size =======*/
+@media (max-width: 700px) {
+  #navbar {
+    position: fixed;
+  }
+
+  .navbar-container {
+    width: 85%;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    left: -100%;
+    top: 4em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    transition: 300ms;
+    background-color: var(--cl-gray-2);
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 5px 5px;
+  }
+
+  .nav-link {
+    padding: unset;
+  }
+
+  .navbar-links {
+    margin-top: 1em;
+  }
+  .navbar-links li {
+    padding: 1em 1.5em;
+  }
+  .social-logo {
+    margin: 3em 0 0 0.5em;
+  }
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu.active {
+    left: 0;
+  }
+
+  #navbar-hamburguer {
+    display: block;
+    transition: 300ms;
+  }
+  #navbar-hamburguer.active {
+    transform: rotate(90deg);
+  }
+}
