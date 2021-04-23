@@ -16,6 +16,7 @@ Variables
   --cl-text: #fcfcfc;
   --cl-gray-1: #3a3a3a;
   --cl-gray-2: #4d4d4d;
+  --cl-hover: #b8b8b8;
 }
 
 /*
@@ -80,7 +81,7 @@ Layout
   justify-content: space-between;
 }
 
-.navbar-links-container {
+.navbar-menu {
   display: flex;
   /* border: 1px solid; */
   width: 100%;
@@ -90,6 +91,9 @@ Layout
 
 .navbar-links {
   margin-right: 2.5em;
+}
+.navbar-links li:hover{
+  color: var(--cl-hover)
 }
 
 .navbar-links,
@@ -108,6 +112,9 @@ Layout
 
 .social-logo {
   width: 4em;
+}
+.social-logo:hover {
+  fill: var(--cl-hover);
 }
 
 #navbar-hamburguer {
@@ -141,7 +148,6 @@ Layout
   .nav-link {
     padding: unset;
   }
-
   .navbar-links {
     margin-top: 1em;
   }
