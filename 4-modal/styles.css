@@ -1,0 +1,123 @@
+/*
+===================
+Fonts
+===================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*
+===================
+Variables
+===================
+*/
+
+:root {
+    --cl-text: #fcfcfc;
+    --cl-primary: #003049;
+    --cl-secondary: #D62828;
+    --cl-terciary: #F77F00;
+    --cl-body-bg: #EAE2B7;
+
+    --box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/*
+===================
+Reset
+===================
+*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+===================
+Global
+===================
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cl-body-bg);
+}
+
+button {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/*
+===================
+Layout
+===================
+*/
+
+.modal_container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+}
+
+.modal_container.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    text-align: center;
+    max-width: 80%;
+    width: 600px;
+    background-color: var(--cl-text);
+    padding: 2em 3em;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+
+.title {
+    margin-bottom: .3em;
+}
+.description {
+    margin-bottom: 1em;
+    opacity: .7;
+}
+
+.btn {
+    border: none;
+    color: var(--cl-text);
+    background-color: var(--cl-secondary);
+    padding: 9px 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    transition: background 300ms ease;
+}
+.btn:hover {
+    background-color: var(--cl-terciary);
+}
+
+
