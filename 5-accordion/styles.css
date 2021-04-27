@@ -1,0 +1,120 @@
+/*
+===================
+Fonts
+===================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
+/*
+===================
+Variables
+===================
+*/
+:root {
+    --gradient: linear-gradient(211.85deg, #E2C00B 14.09%, #BE421B 77.85%);
+}
+/*
+===================
+Reset
+===================
+*/
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+===================
+Global
+===================
+*/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    color: #FFF;
+    background: var(--gradient);
+}
+img {
+    max-width: 100%;
+}
+/*
+===================
+Layout
+===================
+*/
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100vh;
+}
+
+.faq{
+    padding: 1em 0;
+    max-width: 600px;
+    min-width: 300px;
+    height: 400px;
+}
+.faq_question{
+    margin-bottom: 1em;
+}
+.question_header {
+    position: relative;
+    display: flex;
+    width: 100%; 
+}
+.header_chevron {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    transition: transform 500ms ease;
+}
+.header_chevron.active {
+    transform: rotate(180deg);
+}
+.faq_title{
+    font-size: 5rem;
+    margin-bottom: .5rem;
+}
+.header_title {
+    font-size: 1.4rem;
+    margin-bottom: .5em;
+}
+.body_text {
+    font-size: 0.885rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 900ms ease;
+}
+
+.body_text.active {
+    max-height: 100px;
+    overflow: auto;
+}
+
+/*
+===================
+Media Query
+===================
+*/
+@media (min-width: 1000px) {
+    main {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+    .faq {
+        margin-left: 2em;
+    }
+}
+
+
