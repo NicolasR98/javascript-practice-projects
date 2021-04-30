@@ -1,0 +1,144 @@
+/*
+===================
+Fonts
+===================
+*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+
+/*
+===================
+Variables
+===================
+*/
+:root {
+  --bg-color: #101010;
+  --text-color: #fff;
+}
+
+/*
+===================
+Reset
+===================
+*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+===================
+Global
+===================
+*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+
+/*
+===================
+Layout
+===================
+*/
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+.main_container {
+    margin: 3em auto;
+    width: 90%;
+    max-width: 450px;
+}
+
+.header_container {
+    margin-bottom: 3.5em;
+  }
+
+  .subtitle {
+    font-weight: 300;
+  }
+
+  .header_container > .subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .header_container > .title {
+    font-size: 2.8rem;
+    display: inline-block;
+    padding-bottom: 0.255em;
+    border-bottom: 1px solid white;
+  }
+
+  .timer_container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 450px;
+    font-size: 1.2rem;
+  }
+  
+  .timer_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timer_item .subtitle {
+    margin-bottom: .5em;
+    font-size: 1.155rem;
+  }
+  
+  .image_container {
+      height: 100vh;
+      overflow-y: hidden;
+      
+  }
+  
+  .image_container img {
+    z-index: -10;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  @media (min-width: 600px) {
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+    }
+    .main_container {
+      max-width: 600px;
+      margin: unset;
+      margin-top: 3em;
+    }
+    .image_container img {
+      position: relative;
+    }
+    .main_container {
+      padding: 0 1em;
+    }
+  }
